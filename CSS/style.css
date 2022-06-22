@@ -1,5 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --header-height: 3rem;
+/*------------------------------ Font typography ------------------------------*/
+    --Body-font: 'Outfit', sans-serif;
+    --Title-handwriting: 'Kaushan Script', cursive;
+
+/*------------------------------ Font Size ------------------------------*/
+/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px, 2.5rem = 40px ...*/
+    --Big-title: 2rem;
+    --Title: 1.25rem;
+    --normal-size: .75rem;
+    --Sub-title: .45rem;
+
+/*------------------------------Font Weight------------------------------*/
+    --Bold: 700;
+    --Regular: 400;
+
+/*------------------------------ Color Pallet ------------------------------*/
+    --Russian-violet: #3d144c;
+    --Dodger-blue: #1685F8;
+    --Dark-charcoal: #333333;
+    --Gray: #BDBDBD;
+    --White: #FFFFFF;
+    --Gradient: linear-gradient(55.54deg, #FAEB2C 7.82%, #F52789 28.39%, #E900FF 49.39%, #1685F8 70.4%, #3D144C 90.12%);
+
+/*------------------------------ Bottom Margins ------------------------------*/
+/* .25rem = 4px, .5rem = 8px, .75rem = 12px, 1rem = 16px, 1.25rem = 20px ...*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+/*------------------------------ z index ------------------------------*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/*------------------------------ Font size for large devices ------------------------------*/
+@media screen and (min-width: 968px) {
+    :root {
+        --LD-Title-handwriting: 2.5rem;
+        --LD-Title: 2rem;
+        --LD-Sub-title: 1rem;
+    }
+}
+
+/*------------------------------ BASE ------------------------------*/
 * {
     margin: 0;
     padding: 0;
-    borderbox;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--White);
+    font-family: var(--Body-font);
+    font-weight: var(--Regular);
+    font-size: var(--normal-size);
+}
+
+h1, h2, h3, h4 {
+    color: var(--Russian-violet);
+    font-weight: var(--Bold);
+}
+
+p {
+    font-size: var(--normal-size);
+    color: var(--Dark-charcoal);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------------------ REUSABLE CSS CLASSES ------------------------------*/
+.section {
+    padding: 2rem 0 4rem;
+}
+
+.section_title {
+    font-size: var(--Big-title);
+    font-family: var(--Title-handwriting);
+}
+
+.section_subtitle {
+    display: block;
+    width: 150px;
+    margin: auto;
+    color: var(--Dark-charcoal);
+    font-size:var(--normal-size);
+    padding-top: var(--mb-0-5);
+    margin-bottom: var(--mb-3);
+    border-top: var(--Dodger-blue) 2px solid;
+    transition: .3s;
+}
+
+.section_title,
+.section_subtitle {
+    text-align: center;
+}
+
+/*------------------------------ LAYOUT ------------------------------*/
+.container {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--White);
+}
+
+/*------------------------------ NAV ------------------------------*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_logo img {
+    height: 2rem;
+}
+
+.nav_toggle {
+    color: var(--Russian-violet);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav_toggle:hover,
+.nav_item:hover {
+    color: var(--Dodger-blue);
+}
+
+@media screen and (max-width: 767px) {
+    .nav_menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--White);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(61, 20, 76, 0.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav_list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:.75rem;
+    color: var(--Russian-violet);
+    font-weight: var(--Bold);
+}
+
+.nav_link:hover {
+    color: var(--Dodger-blue);
+}
+
+.nav_icon {
+    font-size: 1.2rem;
+}
+
+.nav_close {
+    position: absolute;
+    right: 2.4rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--Russian-violet);
+}
+
+.nav_close:hover {
+    color: var(--Dodger-blue);
+}
+
+/*------------------------------ SHOW MENU ------------------------------*/
+.show-menu {
+    bottom: 0px;
+}
+
+/*------------------------------ HOME ------------------------------*/
+.home_container {
+    gap: 1rem;
+}
+
+.home_content {
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home_social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.home_social-icon {
+    font-size: 1.25rem;
+    color: var(--Russian-violet)
+}
+
+.home_social-icon:hover {
+    color: var(--Dodger-blue);
+    transition: .3s;
+}
+
+.home_blob {
+    height: 200px;
+    width: 200px;
+    fill: var(--Dodger-blue);
+}
+
+.home_img {
+    margin: auto;
+}
+
+.home_blob-img {
+    width: 500px;
+}
+
+.home_data {
+    grid-column: 1/3;
+}
+
+.home_title {
+    font-size: var(--Big-title);
+    font-family: var(--Title-handwriting);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home_subtitle {
+    font-size: var(--normal-size);
+    margin-bottom: var(--mb-1);
+}
+
+.home_description {
+    margin-bottom: var(--mb-2-5);
+}
+
+.home_scroll,
+.dark_mode {
+   display: none;
+}
+
+.home_scroll-button {
+    color: var(--Dodger-blue);
+    transition: .3s;
+}
+
+.home_scroll-button:hover {
+    transform: translateY(.25rem);
+}
+
+.home_scroll-mouse,
+.home_sroll-arrow {
+    font-size: 1.25rem;
+}
+
+.home_scroll-name {
+    margin: .25rem .25rem;
+}
+
+.dark_mode-button {
+    color: var(--Dodger-blue);
+    transition: .3s;
+}
+
+.dark_mode-icon {
+    font-size: 1.15rem;
+    margin: .25rem .25rem;
+}
+
+.dark_mode-button:hover {
+    transform: translateY(.25rem);
+}
+
+.download_cv-button {
+    display: inline-block;
+    color: var(--Dodger-blue);
+    padding: 0 1rem 0 1rem;
+}
+
+.download_cv-button:hover {
+    width: 100;
+    border-bottom: var(--Dodger-blue) 2px solid;
+    transition: .3s;
+}
+
+/*------------------------------ BUTTONS ------------------------------*/
+.button {
+    display: inline-block;
+    background-color: var(--Dodger-blue);
+    color: var(--White);
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.button:hover {
+    background-color: var(--Russian-violet);
+    transition: .3s;
+}
+
+.button_icon {
+    margin-left: .25rem;
+    font-size: 1.25rem;
+    transition: .3s;
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+/*------------------------------ ABOUT ------------------------------*/
+.about_img {
+    width: 200px;
+    border-radius: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about_description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about_info {
+    display: flex;
+    color: var(--Russian-violet);
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about_atribute {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.about_info-title {
+    font-size: var(--Big-title);
+    font-family: var(--Title-handwriting);
+}
+
+.about_info-name {
+    font-size: var(--normal-size);
+    font-weight: var(--Bold);
 }
