@@ -9,7 +9,7 @@
 /*------------------------------ Font Size ------------------------------*/
 /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px, 2.5rem = 40px ...*/
     --Big-title: 2rem;
-    --Title: 1.25rem;
+    --Title: 1rem;
     --normal-size: .75rem;
     --Sub-title: .45rem;
 
@@ -370,7 +370,7 @@ img {
 
 .about_info {
     display: flex;
-    color: var(--Russian-violet);
+    color: var(--Dodger-blue);
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
 }
@@ -389,4 +389,61 @@ img {
 .about_info-name {
     font-size: var(--normal-size);
     font-weight: var(--Bold);
+}
+
+/*------------------------------ SKILLS ------------------------------*/
+.skills_container {
+    row-gap: 0;
+}
+
+.skills_list {
+    display: grid;
+    grid-template-columns: 2fr;
+
+}
+
+.skills_icon img {
+    height: 50px;
+    transition: .5s;
+}
+
+.skills_data {
+    display: flex;
+    gap: var(--mb-1);
+
+}
+
+.skills_title {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills_name {
+    font-size: var(--Title);
+    font-weight: var(--Bold);
+}
+
+.skills_percent {
+    font-size: var(--normal-size);
+    font-style: italic;
+    color: var(--Gray);
+}
+
+.skills_bar {
+    width: 100px;
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills_bar {
+    background-color: var(--Gray);
+}
+
+.skill_porcentage {
+    display: block;
+    background-color: var(--Russian-violet);
+}
+
+.skills_illustrator {
+    width: 90%;
 }
