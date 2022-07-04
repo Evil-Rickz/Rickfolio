@@ -31,7 +31,7 @@
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
     --mb-1: 1rem;
-    --mb-1-5: 1.5rem
+    --mb-1-5: 1.5rem;
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
@@ -370,15 +370,15 @@ img {
 
 .about_info {
     display: flex;
-    color: var(--Dodger-blue);
+    color: var(--Russian-violet);
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
 }
 
 .about_atribute {
     display: flex;
-    gap: .75rem;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .about_info-title {
@@ -397,9 +397,11 @@ img {
 }
 
 .skills_list {
-    display: grid;
-    grid-template-columns: 2fr;
+    row-gap: var(--mb-1-5);
+}
 
+.skills_icon{
+    margin: auto;
 }
 
 .skills_icon img {
@@ -408,9 +410,14 @@ img {
 }
 
 .skills_data {
-    display: flex;
-    gap: var(--mb-1);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
 
+.skills_titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
 }
 
 .skills_title {
@@ -429,8 +436,9 @@ img {
     color: var(--Gray);
 }
 
-.skills_bar {
-    width: 100px;
+.skills_bar,
+.skills_bar-percent {
+    width: 100%;
     height: 5px;
     border-radius: .25rem;
 }
@@ -439,11 +447,31 @@ img {
     background-color: var(--Gray);
 }
 
-.skill_porcentage {
+.skills_bar-percent {
     display: block;
-    background-color: var(--Russian-violet);
+    background-color: var(--Dodger-blue);
 }
 
 .skills_illustrator {
     width: 90%;
+}
+
+.skills_photoshop {
+    width: 95%;
+}
+
+.skills_coreldraw {
+    width: 98%;
+}
+
+.skills_sony-vegas {
+    width: 90%;
+}
+
+.skills_after-effects {
+    width: 80%;
+}
+
+.skills_premiere {
+    width: 85%;
 }
