@@ -8,6 +8,7 @@ const navMenu = document.getElementById ('nav-menu'),
 if (navToggle) {
     navToggle.addEventListener ('click', () =>{
         navMenu.classList.add ('show-menu')
+        navMenu.classList.remove ('hiden-menu')
     })
 }
 
@@ -15,6 +16,7 @@ if (navToggle) {
 /* Validate if contant exists */
 if (navClose){
     navClose.addEventListener ('click', () =>{
+        navMenu.classList.add ('hide-menu')
         navMenu.classList.remove ('show-menu')
     })
  }
@@ -25,6 +27,7 @@ const navLink = document.querySelectorAll ('.nav_link')
 function linkAction (){
     const navMenu = document.getElementById ('nav-menu')
     //when we click on each 'nav_link, we remove the show-menu class.
+    navMenu.classList.add ('hide-menu')
     navMenu.classList.remove ('show-menu')
 }
 
