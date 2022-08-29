@@ -12,7 +12,7 @@
 <body>
 <!------------------------------ HEADER ------------------------------>
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="nav">
              <a href="index.html" class="nav_logo">
                  <img src="MEDIA/RL-logo-var.png" alt="Logo">
              </a>
@@ -55,13 +55,15 @@
                         </a>
                     </li>
                 </ul>
-                  
-                <i class="uil uil-times nav_close" id="nav-close"></i>
             </div>
 
             <div class="nav_btns">
                 <div class="nav_toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
+                </div>
+
+                <div class="nav_close hide-menu" id="nav-close">
+                    <i class="uil uil-times" ></i>
                 </div>
             </div>
         </nav>
@@ -73,26 +75,28 @@
     <!------------------------------ HOME ------------------------------>
         <section class="home section" id="home">
             <div class="home_container container grid">
-                <div class="home_content grid">
+                <div class="home_content">
                     <div class="home_social">
-                        <a href="https://www.linkedin.com/in/rique-lima/" target="_blank" class="home_social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/hexa.designer/" target="_blank" class="home_social-icon">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-
-                        <a href="https://www.behance.net/ricklimafs" target="_blank" class="home_social-icon">
-                            <i class="uil uil-behance"></i>
-                        </a>
+                        <div class="home_social-icons">
+                            <a href="https://www.linkedin.com/in/rique-lima/" target="_blank" class="home_social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hexa.designer/" target="_blank" class="home_social-icon">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                            <a href="https://www.behance.net/ricklimafs" target="_blank" class="home_social-icon">
+                                <i class="uil uil-behance"></i>
+                            </a>
+                        </div>
+                        
+                        <img src="MEDIA/small-blobs.svg" alt="Small blobs" class="home_small-blobs">
                     </div>
 
-                    <div class="home_img">
-                        <svg class="home_blob"width="867" height="709" viewBox="0 0 867 709" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M629.553 0C498.415 0 392.106 106.309 392.106 237.447C392.106 283.18 355.032 320.253 309.3 320.253H194.373C87.0239 320.253 0 407.277 0 514.627C0 621.976 87.0239 709 194.373 709H629.553H672.627C779.976 709 867 621.976 867 514.627C867 501 866.869 487.341 866.99 473.715C866.997 472.995 867 472.274 867 471.553V237.447C867 106.309 760.691 0 629.553 0Z"/>
-                            <image class="home_blob-img" x="310" y="-158" xlink:href="MEDIA/Rick_img.png"></image>
-                        </svg>
+                    <div class="home_media">
+                        <img src="MEDIA/Blob.png" alt="Gradient Blob" class="home_blob-bg">
+                        <p class="impact-phrase">Vi Veri<br>Veniversum<br>Vivus Vici.</p>
+                        <img src="MEDIA/Rick_img.png" alt="Rick image" class="home_img">
+                        <img src="MEDIA/inverse-blobs.svg" alt="Inverse blobs" class="inverse-blobs">
                     </div>
 
                     <div class="home_data">
@@ -102,13 +106,15 @@
 
                         <p class="home_description">High level experience in Design with product design, branding, motion and a little bit illustrations. Ever producing an quality work.</p>
 
-                        <a href="#contact" class="button button-flex"> Contact Me
-                            <i class="uil uil-message button_icon"></i>
-                        </a>
-
-                        <a download="" href="MEDIA/Curriculum Antonio Henrique.pdf" class="button-flex download_cv-button"> Download CV
-                            <i class="uil uil-file-download-alt button_icon"></i>
-                        </a>
+                        <div class="home_buttons">
+                            <a href="#contact" class="button button-flex"> Contact Me
+                                <img class="button_icon" src="MEDIA/icons/send-icon.svg"></img>
+                            </a>
+                            
+                            <a download="" href="MEDIA/Curriculum Antonio Henrique.pdf" class="button-flex download_cv-button"> Download CV
+                                <img class="button_icon" src="MEDIA/icons/download-icon.svg"></img>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -174,58 +180,58 @@
             <span class="section_subtitle">Technical level</span>
 
             <div class="skills_container container grid">
-                    <div class="skills_content">
-                        <div class="skills_list grid">
-                            <div class="skills_data">
-                                <div class="skills_icon">
-                                    <img src="MEDIA/brands-icons/illustrator-icon.svg" alt="Illustrator icon">
-                                </div>
+                <div class="skills_content">
+                    <div class="skills_list grid">
+                        <div class="skills_data">
+                            <div class="skills_icon">
+                                <img src="MEDIA/brands-icons/illustrator-icon.svg" alt="Illustrator icon">
+                            </div>
                                 
+                            <div class="skills_content">
+                                <div class="skills_titles">
+                                    <h3 class="skills_title">Illustrator</h3>
+
+                                    <span class="skills_percent">90%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_bar-percent skills_illustrator"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills_data">
+                            <div class="skills_icon">
+                                <img src="MEDIA/brands-icons/photoshop-icon.svg" alt="Photoshop icon">
+                            </div>
+                                
+                            <div class="skills_content">
                                 <div class="skills_content">
                                     <div class="skills_titles">
-                                        <h3 class="skills_title">Illustrator</h3>
+                                        <h3 class="skills_title">Photoshop</h3>
 
-                                        <span class="skills_percent">90%</span>
+                                        <span class="skills_percent">95%</span>
                                     </div>
 
                                     <div class="skills_bar">
-                                        <span class="skills_bar-percent skills_illustrator"></span>
+                                        <span class="skills_bar-percent skills_photoshop"></span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="skills_data">
-                                <div class="skills_icon">
-                                    <img src="MEDIA/brands-icons/photoshop-icon.svg" alt="Photoshop icon">
-                                </div>
-                                
-                                <div class="skills_content">
-                                    <div class="skills_content">
-                                        <div class="skills_titles">
-                                            <h3 class="skills_title">Photoshop</h3>
-
-                                            <span class="skills_percent">95%</span>
-                                        </div>
-
-                                        <div class="skills_bar">
-                                            <span class="skills_bar-percent skills_photoshop"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="skills_data">
+                            <div class="skills_icon">
+                                <img src="MEDIA/brands-icons/corel-icon.svg" alt="CorelDRAW icon">
                             </div>
-
-                            <div class="skills_data">
-                                <div class="skills_icon">
-                                    <img src="MEDIA/brands-icons/corel-icon.svg" alt="CorelDRAW icon">
-                                </div>
                                 
+                            <div class="skills_content">
                                 <div class="skills_content">
-                                    <div class="skills_content">
-                                        <div class="skills_titles">
-                                            <h3 class="skills_title">CorelDRAW</h3>
+                                    <div class="skills_titles">
+                                        <h3 class="skills_title">CorelDRAW</h3>
 
-                                            <span class="skills_percent">98%</span>
-                                        </div>
+                                        <span class="skills_percent">98%</span>
+                                    </div>
 
                                         <div class="skills_bar">
                                             <span class="skills_bar-percent skills_coreldraw"></span>
@@ -316,7 +322,7 @@
                     <!------------------------------ EDUCATION QUALIFICATIONS ------------------------------>
                     <div class="qualification_content qualification_active" data-content id="education">
                         <!------------------------------ EDUCATION 1 ------------------------------>
-                        <div class="qualification_data">
+                        <div class="qualification_data left-qualification">
                             <div class="qualification_info">
                                 <h3 class="qualification_title">GRAPHIC<br>DESIGNER</h3>
 
@@ -354,7 +360,7 @@
                         </div>
 
                         <!------------------------------ EDUCATION 3 ------------------------------>
-                        <div class="qualification_data">
+                        <div class="qualification_data left-qualification">
                             <div class="qualification_info">
                                 <h3 class="qualification_title">PRODUCT<br>DESIGNER</h3>
 
@@ -395,7 +401,7 @@
                     <!------------------------------ WORK QUALIFICATIONS ------------------------------>
                     <div class="qualification_content" data-content id="work">
                         <!------------------------------ WORK 1 ------------------------------>
-                        <div class="qualification_data">
+                        <div class="qualification_data left-qualification">
                             <div class="qualification_info">
                                 <h3 class="qualification_title">COMPUTING and<br>GRAPHIC DESIGNER</h3>
 
@@ -433,7 +439,7 @@
                         </div>
 
                         <!------------------------------ WORK 3 ------------------------------>
-                        <div class="qualification_data">
+                        <div class="qualification_data left-qualification">
                             <div class="qualification_info">
                                 <h3 class="qualification_title">SENIOR<br>GRAPHIC DESIGNER</h3>
 
@@ -456,6 +462,68 @@
 
         <!------------------------------ SERVICES ------------------------------>
         <section class="services section" id="services">
+            <h2 class="section_title">Services</h2>
+
+            <span class="section_subtitle">Shall we work together?</span>
+
+            <div class="services_content">
+                <div class="branding services_data">
+                    <div class="services_background">
+                        <img src="MEDIA/branding-img.png" alt="" class="branding-bg">
+                    </div>
+
+                    <div class="services_title">
+                        <h3 class="service_title">
+                            BRANDING
+                        </h3>
+                        <span class="service_sub-title">
+                            Create your business identity
+                        </span>
+                    </div>
+
+                    <span class="services_description">
+                        Branding or brand management refers to the management of a company's brand, such as its name, the images or ideas associated with it, including slogans, symbols, logos and other visual identity elements that represent it or its products and services.
+                    </span>
+                </div>
+
+                <div class="flyers services_data">
+                    <div class="services_background">
+                        <img src="MEDIA/flyers-img.png" alt="" class="branding-bg">
+                    </div>
+
+                    <div class="services_title">
+                        <h3 class="service_title">
+                            FLYERS
+                        </h3>
+                        <span class="service_sub-title">
+                            Promote your product the right way
+                        </span>
+                    </div>
+
+                    <span class="service_description">
+                        Flyers are promotional materials that carry important information in a simple and direct way. Widely used for quick and punctual actions, if this is the purpose of your disclosure, avoid information that disperses the customer's attention, go straight to the point.
+                    </span>
+                </div>
+                
+                <div class="motion services_data">
+                    <div class="services_background">
+                        <img src="MEDIA/motion-img.png" alt="" class="branding-bg">
+                    </div>
+
+                    <div class="services_title">
+                        <h3 class="service_title">
+                            MOTION FLYER
+                        </h3>
+                        <span class="service_sub-title">
+                            Draw even more attention in the publicity
+                        </span>
+                    </div>
+
+                    <span class="service_description">
+                        We can define motion design as a resource that brings graphic design to life, through animation resources and using a language that mixes the concepts of Design with cinema.
+                    </span>
+                </div>
+            </div>
 
         </section>
 
