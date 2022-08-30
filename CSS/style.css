@@ -661,3 +661,62 @@ img {
 .services_description {
     display: none;
 }
+
+/*------------------------------ PORTFOLIO ------------------------------*/
+.slider {
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 100%;
+    height: 202px;
+    overflow: hidden;
+}
+
+.slider input {
+    display: none
+}
+
+.slide {
+    position: relative;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 322px;
+    margin-top: 16px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.manual-btn {
+    background-color: var(--Gray);
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.manual-btn:hover {
+    background-color: var(--Dodger-blue);
+    width: 24px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -100%;
+}
