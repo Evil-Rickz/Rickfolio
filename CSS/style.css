@@ -485,7 +485,7 @@ img {
 }
 
 .skills_bar {
-    background-color: var(--Gray);
+    background-color: #e7e7e7;
 }
 
 .skills_bar-percent {
@@ -525,9 +525,8 @@ img {
 }
 
 .qualification_button {
-    color: var(--Russian-violet);
+    color: var(--Gray);
     font-size: var(--Title);
-    font-weight: var(--Bold);
     cursor: pointer;
 }
 
@@ -550,6 +549,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: right;
+    transition: 4s ease;
 }
 
 .left-qualification {
@@ -579,8 +579,8 @@ img {
     width: 12px;
     height: 12px;
     background-color: var(--Dodger-blue);
-    border-radius: 50%;
-    transform: translate(0, 24px);
+    border-radius: 100%;
+    transform: translate(0, 8px);
 }
 
 .qualification_line {
@@ -588,7 +588,7 @@ img {
     width: 2px;
     height: 100%;
     background-color: var(--Dodger-blue);
-    transform: translate(6px, 20px);
+    margin: auto;
     opacity: 30%;
 }
 
@@ -602,6 +602,7 @@ img {
 
 .qualification_button.qualification_active {
     color: var(--Dodger-blue);
+    font-weight: var(--Bold);
 }
 
 /*------------------------------ SERVICES ------------------------------*/
@@ -645,19 +646,29 @@ img {
 
 /*------------------------------ PORTFOLIO ------------------------------*/
 .slider {
-    border-radius: var(--mb-border-radius);
     margin: 0 auto;
     width: 100%;
     height: 202px;
     overflow: hidden;
+    border-radius: var(--mb-border-radius);
+    outline: 4px solid var(--Dodger-blue);
 }
 
-.slider input {
-    display: none
+.slides {
+    width: 500%;
+    height: 202px;
+    display: flex;
+    align-items: center;
+}
+
+.slides input {
+    display: none;
 }
 
 .slide {
+    width: 25%;
     position: relative;
+    transition: .4s;
 }
 
 .slide img {
@@ -666,24 +677,22 @@ img {
 
 .manual-navigation {
     position: absolute;
-    width: 322px;
-    margin-top: 14rem;
+    width: 80vw;
+    margin: 1rem auto;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
 }
 
 .manual-btn {
-    background-color: var(--Gray);
     padding: 4px;
     border-radius: 1rem;
     cursor: pointer;
-    transition: .4s;
+    transition: .8s;
 }
 
 .manual-btn:hover {
-    background-color: var(--Dodger-blue);
-    width: 24px;
+    background-color: var(--Dark-charcoal);
 }
 
 #radio1:checked ~ .first {
@@ -691,7 +700,7 @@ img {
 }
 
 #radio2:checked ~ .first {
-    margin-left: -25%;
+    margin-left: -28%;
 }
 
 #radio3:checked ~ .first {
@@ -699,9 +708,65 @@ img {
 }
 
 #radio4:checked ~ .first {
-    margin-left: -75%;
+    margin-left: -77%;
 }
 
 #radio5:checked ~ .first {
     margin-left: -100%;
+}
+
+.auto-navigation {
+    position: absolute;
+    width: 80vw;
+    margin-top: 243px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.auto-navigation div {
+    background-color: var(--Gray);
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+#radio1:checked ~ .auto-navigation .auto-btn1 {
+    background-color: var(--Dodger-blue);
+}
+
+#radio2:checked ~ .auto-navigation .auto-btn2 {
+    background-color: var(--Dodger-blue);
+}
+
+#radio3:checked ~ .auto-navigation .auto-btn3 {
+    background-color: var(--Dodger-blue);
+}
+
+#radio4:checked ~ .auto-navigation .auto-btn4 {
+    background-color: var(--Dodger-blue);
+}
+
+#radio5:checked ~ .auto-navigation .auto-btn5 {
+    background-color: var(--Dodger-blue);
+}
+
+/*------------------------------ CALL TO ACTION ------------------------------*/
+.CTA_media {
+    position: relative;
+}
+
+.CTA_img {
+    position: absolute;
+    top: 0px;
+}
+
+.CTA_button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    right: 10vw;
 }

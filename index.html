@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Rickfolio</title>
 </head>
@@ -535,62 +534,91 @@
 
             <div class="portfolio_content container grid">
                 <div class="slider">
-                    <!------------- Radio Buttons ------------->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <input type="radio" name="radio-btn" id="radio5">
+                    <div class="slides">
+                        <!------------- Radio Buttons ------------->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
 
-                    <!------------- Slide Images ------------->
-                    <div class="slide first">
-                        <img src="MEDIA/portfolio-imgs/image1.png" alt="Portfolio image 1">
+                        <!------------- Slide Images ------------->
+                        <div class="slide first">
+                            <img src="MEDIA/portfolio-imgs/image1.png" alt="Portfolio image 1">
+                        </div>
+
+                        <div class="slide">
+                            <img src="MEDIA/portfolio-imgs/image2.png" alt="Portfolio image 2">
+                        </div>
+
+                        <div class="slide">
+                            <img src="MEDIA/portfolio-imgs/image3.png" alt="Portfolio image 3">
+                        </div>
+
+                        <div class="slide">
+                            <img src="MEDIA/portfolio-imgs/image4.png" alt="Portfolio image 4">
+                        </div>
+
+                        <div class="slide">
+                            <img src="MEDIA/portfolio-imgs/image5.png" alt="Portfolio image 5">
+                        </div>
+                        
+                        <!------------- Auto navigation ------------->
+                        <div class="auto-navigation">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                        </div>
                     </div>
 
-                    <div class="slide">
-                        <img src="MEDIA/portfolio-imgs/image2.png" alt="Portfolio image 2">
-                    </div>
 
-                    <div class="slide">
-                        <img src="MEDIA/portfolio-imgs/image3.png" alt="Portfolio image 3">
+                    
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
                     </div>
-
-                    <div class="slide">
-                        <img src="MEDIA/portfolio-imgs/image4.png" alt="Portfolio image 4">
-                    </div>
-
-                    <div class="slide">
-                        <img src="MEDIA/portfolio-imgs/image5.png" alt="Portfolio image 5">
-                    </div>
-
-                    <!------------- Auto navigation ------------->
-                    <div class="auto-navigation">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                        <div class="auto-btn5"></div>
-                    </div>
-                </div>
-
-                <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                    <label for="radio5" class="manual-btn"></label>
                 </div>
             </div>
         </section>
 
         <!------------------------------ CALL TO ACTION ------------------------------>
         <section class="call-to-action section" id="callToAction">
-            
+            <h2 class="section_title">Have a new project?</h2>
+
+            <span class="section_subtitle">Contact me now and get a big discount</span>
+
+            <div class="CTA_content container grid">
+                <div class="CTA_media">
+                    <img src="MEDIA/blobs/Blob-inverse.png" alt="Gradient Blob" class="CTA_blob-bg">
+                    <img src="MEDIA/Rick_img-inverse.png" alt="Rick image" class="CTA_img">
+                    <img src="MEDIA/blobs/small-blobs.svg" alt="Small blobs" class="CTA_inverse-blobs">
+                </div>
+
+                <div class="CTA_button">
+                    <img src="MEDIA/blobs/inverse-blobs.svg" alt="Inverse blobs" class="CTA_inverse-blobs">
+
+                    <a href="#contact" class="button button-flex"> Contact Me
+                        <img class="button_icon" src="MEDIA/icons/send-icon.svg"></img>
+                    </a>
+                </div>
+
+
+            </div>
         </section>
 
         <!------------------------------ EVALUATIONS ------------------------------>
         <section class="evaluations section" id="evaluations">
-            
+            <h2 class="section_title">Evaluations</h2>
+
+            <span class="section_subtitle">About my work</span>
+
+            <div class="evaluations_content container grid">
+            </div>
         </section>      
 
         <!------------------------------ CONTACT ME ------------------------------>
