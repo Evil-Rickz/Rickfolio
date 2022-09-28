@@ -22,8 +22,10 @@
     --Dodger-blue: #1683f8;
     --Yellow-sun: #faeb2c;
     --Dark-charcoal: #333333;
+    --Dark-charcoal-transp: #333333da;
     --Gray: #bdbdbd;
     --White: #ffffff;
+    --White-transp: #ffffffda;
     --Shadow: #3e144d7e;
     --Gradient: linear-gradient(
         55deg,
@@ -39,6 +41,7 @@
     --tertiary-color: var(--Gray);
     --emphasis-color: var(--Dodger-blue);
     --background-color: var(--White);
+    --background-transp: var(--White-transp);
     --shadow-color: var(--Shadow);
 
 /*------------------------------ Bottom Margins ------------------------------*/
@@ -96,12 +99,8 @@ body.dark-theme {
     --secundary-color: var(--Gray);
     --emphasis-color: var(--Dodger-blue);
     --background-color: var(--Dark-charcoal);
+    --background-transp: var(--Dark-charcoal-transp);
     --shadow-color: var(--Russian-violet);
-}
-
-h1, h2, h3, h4 {
-    color: var(--primary-color);
-    font-weight: var(--Bold);
 }
 
 p {
@@ -129,6 +128,7 @@ img {
 }
 
 .section_title {
+    color: var(--primary-color);
     font-size: var(--Big-title);
     font-family: var(--Title-handwriting);
     padding-bottom: var(--mb-0-5);
@@ -479,6 +479,7 @@ img {
 }
 
 .skills_title {
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
 }
@@ -563,6 +564,7 @@ img {
 }
 
 .qualification_title {
+    color: var(--primary-color);
     font-size: var(--normal-size);
     font-weight: var(--Bold);
     margin-bottom: var(--mb-0-5);
@@ -612,46 +614,97 @@ img {
 }
 
 /*------------------------------ SERVICES ------------------------------*/
-
-.services_data {
+.services_content {
     height: 262px;
     border-radius: var(--mb-border-radius);
     overflow: hidden;
     cursor: pointer;
-    color: var(--White);
+    transition: .4s;
 }
 
-.services_data:hover {
+.services_content:hover {
     box-shadow: 0px 0px 16px var(--shadow-color) ;
-    transition: .4s;
+}
+
+.services_content:hover .services_data{
+    background-color: rgba(62, 20, 77, .7);
 }
 
 .services_background img{
     width: 100%;
 }
 
-.services_title {
+.services_data {
+    color: var(--White);
     position: relative;
-    top: -63px;
+    top: -62px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 60px;
-    background-color: var(--emphasis-color);
-}
-
-.services_title:hover {
-    background-color: var(--Russian-violet);
-    transition: .8s;
+    background-color: rgba(22, 131, 248, .7);
+    transition: .4s;
 }
 
 .service_title {
     color: var(--White);
 }
 
-.services_description {
+.services_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-transp);
+    padding: 2rem;
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    animation: modal .4s;
+}
+
+.active-modal {
+    display: flex;
+}
+
+.services_modal-content {
+    position: relative;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    padding: 4rem;
+    border-radius: var(--mb-border-radius);
+    text-align: center;
+    font-size: var(--Title);
+}
+
+.modal-close {
+    position: absolute;
+    top: .6rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.modal-close:hover {
+    color: var(--emphasis-color);
+}
+
+
+@keyframes modal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /*------------------------------ PORTFOLIO ------------------------------*/
@@ -676,12 +729,13 @@ img {
 
 .slide {
     width: 25%;
+    height: 100%;
     position: relative;
     transition: .4s;
 }
 
 .slide img {
-    height: 100%;
+    width: 100%;
 }
 
 .manual-navigation {
@@ -774,6 +828,8 @@ img {
     position: absolute;
     bottom: 4px;
     left: 0px;
+    height: 288px;
+    border-radius: 0 0 0 80px;
 }
 
 .contact-me_inverse-blobs {
@@ -911,8 +967,17 @@ img {
         gap: .4rem;
     }
 
-    .services_data {
+    .services_content {
         height: 196px;
+    }
+
+    .services_modal-content {
+        padding: 2rem;
+    }
+    
+
+    .services_description {
+        font-size: var(--normal-size);
     }
 
     .slider {
@@ -925,6 +990,7 @@ img {
     
     .contact-me_img {
         height: 216px;
+        border-radius: 0 0 0 56px;
     }
 
     .contact-me_button {
