@@ -14,9 +14,25 @@
 <!------------------------------ HEADER ------------------------------>
     <header class="header" id="header">
         <nav class="nav">
-             <a href="index.html" class="nav_logo">
-                 <img src="MEDIA/RL-logo-var.png" alt="Logo">
-             </a>
+             <div class="nav_container" id="nav-container">
+                 <a href="index.html" class="nav_logo">
+                     <img src="MEDIA/RL-logo-var.png" alt="Logo">
+                 </a>
+                 
+                             <div class="dark_mode">
+                    <i class="uil uil-moon dark_mode-icon change-theme" id="theme-button"></i>
+                    <!--<i class="uil uil-sun"></i>-->
+                             </div>
+                 
+                             <div class="nav_btns">
+                    <div class="nav_toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                    <div class="nav_close hide-menu" id="nav-close">
+                        <i class="uil uil-times" ></i>
+                    </div>
+                             </div>
+             </div>
 
             <div class="nav_menu hide-menu" id="nav-menu">
                 <ul class="nav_list grid">
@@ -51,26 +67,11 @@
                     </li>
 
                     <li class="nav_item">
-                        <a href="#contact" class="nav_link">
+                        <a href="#contactMe" class="nav_link">
                             <i class="uil uil-comment-alt-medical nav_icon"></i> Contact
                         </a>
                     </li>
                 </ul>
-            </div>
-
-            <div class="dark_mode">
-                <i class="uil uil-moon dark_mode-icon change-theme" id="theme-button"></i>
-                <!--<i class="uil uil-sun"></i>-->
-            </div>
-
-            <div class="nav_btns">
-                <div class="nav_toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-
-                <div class="nav_close hide-menu" id="nav-close">
-                    <i class="uil uil-times" ></i>
-                </div>
             </div>
         </nav>
 
@@ -113,25 +114,15 @@
                         <p class="section_description">High level experience in Design with product design, branding, motion and a little bit illustrations. Ever producing an quality work.</p>
 
                         <div class="home_buttons">
-                            <a href="#contact" class="button button-flex"> Contact Me
-                                <img class="button_icon" src="MEDIA/icons/send-icon.svg"></img>
+                            <a href="http://wa.link/9dceaa" target="_blank" class="contact-button"> Contact Me
+                                <i class="uil uil-message contact-button_icon"></i>
                             </a>
                             
                             <a download="" href="MEDIA/Curriculum Antonio Henrique.pdf" class="button-flex download_cv-button"> Download CV
-                                <img class="button_icon" src="MEDIA/icons/download-icon.svg"></img>
+                                <i class="uil uil-download-alt"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="home_scroll">
-                    <a href="#about" class="home_scroll-button button-flex">
-                        <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-
-                        <span class="home_scroll-name">Scroll down</span>
-
-                        <i class="uil uil-arrow-down home_sroll-arrow"></i>
-                    </a>
                 </div>
             </div>
         </section>
@@ -305,7 +296,7 @@
 
             <span class="section_subtitle">Qualitative experience</span>
 
-            <div class="qualification_container container">
+            <div class="qualification_container">
                 <div class="qualification_tabs">
                     <div class="qualification_button button-flex qualification_active" data-target='#education'>
                         <i class="uil uil-graduation-cap qualification_icon"></i>Education
@@ -632,8 +623,8 @@
                 </div>
 
                 <div class="contact-me_button">
-                    <a href="#contact" class="button button-flex"> Contact Me
-                        <img class="button_icon" src="MEDIA/icons/send-icon.svg"></img>
+                    <a href="http://wa.link/9dceaa" target="_blank" class="contact-button"> Contact Me
+                        <i class="uil uil-message contact-button_icon"></i>
                     </a>
                 </div>
             </div>
@@ -705,7 +696,7 @@
 <!------------------------------ SWIPER JS ------------------------------>
 
 
-<!------------------------------  ------------------------------>
+<!------------------------------ SCRIPTS ------------------------------>
     <script src="JS/modal-services.js"></script>
     <script src="JS/app.js"></script>
 </body>

@@ -2,7 +2,7 @@
 function openModal(modalID) {
     const modal = document.getElementById(modalID);
     if (modal) {
-//        modal.classList.toggle('active-modal');
+        modal.classList.toggle('active-modal')
 /*        modal.addEventListener('click', (e) => {
             if(e.target.id == modalID || e.target.className == 'modal-close') {
                 modal.classList.remove('active-modal')

@@ -1,15 +1,17 @@
 /*------------------------------ MENU SHOW/HIDDEN Y ------------------------------*/
 const navMenu = document.getElementById ('nav-menu'),
         navToggle = document.getElementById ('nav-toggle'),
-        navClose = document.getElementById ('nav-close')
+        navClose = document.getElementById ('nav-close'),
+        navContainer = document.getElementById ('nav-container')
 
 /*------------------------------ SHOW MENU ------------------------------*/
 /* Validate if contant exists */
 if (navToggle) {
     navToggle.addEventListener ('click', () =>{
-        navMenu.classList.remove ('hide-menu')
-        navClose.classList.remove ('hide-menu')
-        navToggle.classList.add ('hide-menu')
+        navMenu.classList.remove ('hide-menu');
+        navClose.classList.remove ('hide-menu');
+        navToggle.classList.add ('hide-menu');
+        navContainer.classList.add ('hide-shadow')
     })
 }
 
@@ -17,18 +19,23 @@ if (navToggle) {
 /* Validate if contant exists */
 if (navClose){
     navClose.addEventListener ('click', () =>{
-        navMenu.classList.add ('hide-menu')
-        navClose.classList.add ('hide-menu')
-        navToggle.classList.remove ('hide-menu')
+        navMenu.classList.add ('hide-menu');
+        navClose.classList.add ('hide-menu');
+        navToggle.classList.remove ('hide-menu');
+        navContainer.classList.remove ('hide-shadow')
+
     })
  }
 
-/*------------------------------ REMOVE MENU MOBILE ------------------------------*/
+/*------------------------------ LINK ACT HIDDEN MENU ------------------------------*/
 const navLink = document.querySelectorAll ('.nav_link')
 
 function linkAction (){
     //when we click on each 'nav_link, we remove the show-menu class.
-    navMenu.classList.add ('hide-menu')
+    navMenu.classList.add ('hide-menu');
+    navClose.classList.add ('hide-menu');
+    navToggle.classList.remove ('hide-menu');
+    navContainer.classList.remove ('hide-shadow')
 }
 
 navLink.forEach (n => n.addEventListener ('click', linkAction))
