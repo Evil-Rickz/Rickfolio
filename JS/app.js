@@ -49,15 +49,12 @@ tabs.forEach(tab =>{
         const target = document.querySelector(tab.dataset.target)
 
         tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification_active')
+            tabContent.classList.toggle('qualification_active')
         })
-        target.classList.add('qualification_active')
 
         tabs.forEach(tab =>{
-            tab.classList.remove('qualification_active')
+            tab.classList.toggle('qualification_active')
         })
-
-        tab.classList.add('qualification_active')
     })
 })        
 
@@ -107,3 +104,57 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*------------------------------ SCROLL REVEL ANIMATIONS ------------------------------*/
+const SR = ScrollReveal({
+    origin: 'top',
+    distance: '64px',
+    duration: 2400,
+    delay: 800,
+    //reset: true,
+})
+
+SR.reveal(`.home_blob-bg`)
+SR.reveal(`.home_image`)
+SR.reveal(`.impact-phrase`, {delay: 4200, distance: '0px'})
+SR.reveal(`.inverse-blobs`, {delay: 2600, origin: 'right'})
+SR.reveal(`.home_small-blobs`, {delay: 2800, origin: 'left'})
+SR.reveal(`.home_social-icons`, {delay: 1600, origin: 'left'})
+SR.reveal(`.section_title`, {delay: 1000})
+SR.reveal(`.section_subtitle`, {delay: 1800, distance: '0px'})
+SR.reveal(`.section_description`, {delay: 2000})
+SR.reveal(`.home_buttons`, {delay: 2400, origin: 'bottom'})
+SR.reveal(`.home_scroll`, {delay: 3200})
+SR.reveal(`.header`, {delay: 2400, distance: '0px'})
+
+SR.reveal(`.about_img`, {delay: 1800})
+SR.reveal(`.about_info`, {delay: 2200, origin: 'bottom'})
+
+SR.reveal(`.skills_icon`, {delay: 2400, distance: '0px', origin: 'left', width: '0px'})
+SR.reveal(`.skills_content`, {delay: 2400, distance: '0px'})
+SR.reveal(`.skills_bar-percent`, {delay: 3200, distance: '0px', origin: 'left', width: '0px'})
+SR.reveal(`.skills_percent`, {delay: 2800, origin: 'left'})
+
+SR.reveal(`.qualification_tabs`, {delay: 2400})
+SR.reveal(`.qualification_sections`, {delay: 3200})
+/*
+SR.reveal(`.qualification_data .qualification_info`, {delay: 4400})
+SR.reveal(`.qualification_data .qualification_rounder`, {delay: 5000, distance: '0px'})
+SR.reveal(`.qualification_data .qualification_line`, {delay: 5800, distance: '0px', height: '0px'})
+
+SR.reveal(`.left-qualification .qualification_info`, {delay: 2800})
+SR.reveal(`.left-qualification .qualification_rounder`, {delay: 3600, distance: '0px'})
+SR.reveal(`.left-qualification .qualification_line`, {delay: 4400, distance: '0px', height: '0px'})
+*/
+SR.reveal(`.branding`, {delay: 2400})
+SR.reveal(`.flyers`, {delay: 2800})
+SR.reveal(`.motion`, {delay: 3200})
+
+SR.reveal(`.portfolio_content`, {delay: 2400, distance: '0px'})
+
+SR.reveal(`.contact-me_button`, {delay: 2400, origin: 'left'})
+SR.reveal(`.contact-me_inverse-blobs`, {delay: 2600, origin: 'right'})
+SR.reveal(`.contact-me_small-blobs`, {delay: 2600, origin: 'left'})
+SR.reveal(`.contact-me_blob-bg, .contact-me_img`, {delay: 3200})
+
+SR.reveal(`.footer`, {delay: 2400, distance: '0px'})
