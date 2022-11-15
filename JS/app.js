@@ -175,11 +175,6 @@ SR.reveal(`.home_buttons`, {delay: 2400, origin: 'bottom'})
 SR.reveal(`.home_scroll`, {delay: 3200})
 SR.reveal(`.header`, {delay: 2400, distance: '0px'})
 
-SR.reveal(`.skills_icon`, {delay: 2400, distance: '0px', origin: 'left', width: '0px'})
-SR.reveal(`.skills_content`, {delay: 2400, distance: '0px'})
-SR.reveal(`.skills_bar-percent`, {delay: 3200, distance: '0px', origin: 'left', width: '0px'})
-SR.reveal(`.skills_percent`, {delay: 2800, origin: 'left'})
-
 SR.reveal(`.contact-me_button`, {delay: 2400, origin: 'left'})
 SR.reveal(`.contact-me_inverse-blobs`, {delay: 2600, origin: 'right'})
 SR.reveal(`.contact-me_small-blobs`, {delay: 2600, origin: 'left'})
