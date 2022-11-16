@@ -157,24 +157,24 @@ themeButton.addEventListener('click', () => {
 const SR = ScrollReveal({
     origin: 'top',
     distance: '64px',
-    duration: 1600,
-    delay: 800,
+    duration: 800,
+    delay: 400,
     //reset: true,
 })
 
-SR.reveal(`.home_blob-bg`)
-SR.reveal(`.home_image`)
-SR.reveal(`.impact-phrase`, {delay: 4200, distance: '0px'})
-SR.reveal(`.inverse-blobs`, {delay: 2600, origin: 'right'})
-SR.reveal(`.home_small-blobs`, {delay: 2800, origin: 'left'})
-SR.reveal(`.home_social-icons`, {delay: 1600, origin: 'left'})
-SR.reveal(`.section_title`, {delay: 1000})
-SR.reveal(`.section_subtitle`, {delay: 1800, distance: '0px'})
-SR.reveal(`.section_description`, {delay: 2000})
-SR.reveal(`.home_buttons`, {delay: 2400, origin: 'bottom'})
-SR.reveal(`.home_scroll`, {delay: 3200})
-SR.reveal(`.header`, {delay: 2400, distance: '0px'})
+SR.reveal(`.home_title`, {delay: 400})
+SR.reveal(`.home_subtitle`, {delay: 800, distance: '0px'})
+SR.reveal(`.home_description`, {delay: 800})
+SR.reveal(`.home_image`, {delay: 1200})
+SR.reveal(`.home_small-blobs`, {delay: 1600, origin: 'right'})
+SR.reveal(`.inverse-blobs`, {delay: 2000, origin: 'left'})
+SR.reveal(`.home_social-icons`, {delay: 2400})
+SR.reveal(`.home_buttons`, {delay: 2800})
+SR.reveal(`.home_scroll`, {delay: 2800})
 
-SR.reveal(`.contact-me_button`, {delay: 2400, origin: 'left'})
-SR.reveal(`.contact-me_inverse-blobs`, {delay: 2600, origin: 'right'})
-SR.reveal(`.contact-me_small-blobs`, {delay: 2600, origin: 'left'})
+SR.reveal(`.about_img`, {delay: 400, origin: 'left'})
+SR.reveal(`.about_info`, {delay: 800, origin: 'bottom'})
+
+SR.reveal(`.contact-me_button`, {delay: 400, origin: 'left'})
+SR.reveal(`.contact-me_inverse-blobs`, {delay: 800, origin: 'right'})
+SR.reveal(`.contact-me_small-blobs`, {delay: 1200, origin: 'left'})

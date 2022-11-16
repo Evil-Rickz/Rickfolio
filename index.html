@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="icon" type="image/x-icon" href="MEDIA/icons/RL-favicon.ico">
-    <title>Rickfolio</title>
+    <title>Hexa Design</title>
 </head>
 
 <body>
@@ -42,6 +42,12 @@
                             <i class="uil uil-estate nav_icon"></i> Home
                         </a> 
                     </li>
+                    
+                    <li class="nav_item">
+                        <a href="#services" class="nav_link">
+                            <i class="uil uil-briefcase-alt nav_icon"></i> Services
+                        </a>
+                    </li>
 
                     <li class="nav_item">
                         <a href="#about" class="nav_link">
@@ -52,12 +58,6 @@
                     <li class="nav_item">
                         <a href="#skills" class="nav_link">
                             <i class="uil uil-brain nav_icon"></i> Skills
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#services" class="nav_link">
-                            <i class="uil uil-briefcase-alt nav_icon"></i> Services
                         </a>
                     </li>
 
@@ -86,7 +86,9 @@
                 <div class="home_media">
                     <img src="MEDIA/home_image.png" alt="Home Image" class="home_image">
 
-                    <div class="home_social">
+                    <div class="home_media-content">
+                        <img src="MEDIA/blobs/small-blobs.svg" alt="Small blobs" class="home_small-blobs">
+                        
                         <div class="home_social-icons">
                             <a href="https://www.linkedin.com/in/rique-lima/" target="_blank" class="home_social-icon">
                                     <i class="uil uil-linkedin-alt"></i>
@@ -99,29 +101,26 @@
                             <a href="https://www.behance.net/ricklimafs" target="_blank" class="home_social-icon">
                                 <i class="uil uil-behance"></i>
                             </a>
-                        </div>
-                            
-                        <img src="MEDIA/blobs/small-blobs.svg" alt="Small blobs" class="home_small-blobs">
+                        </div> 
                     </div>
-
-                    <p class="impact-phrase">"Vi Veri<br>Veniversum<br>Vivus Vici."</p>
-
+                    
                     <img src="MEDIA/blobs/inverse-blobs.svg" alt="Inverse blobs" class="inverse-blobs">
+                    <!-- <p class="impact-phrase">"Vi Veri<br>Veniversum<br>Vivus Vici."</p> -->
                 </div>
 
                 <div class="home_data">
-                        <h1 class="section_title">Hi, i’m Henrique</h1>
+                        <h1 class="section_title home_title">Hi, i’m Henrique</h1>
 
-                        <span class="section_subtitle">Graphic Designer</span>
+                        <span class="section_subtitle home_subtitle">Graphic Design / Motion Design</span>
 
-                        <p class="section_description">High level experience in Design with product design, branding, motion and a little bit illustrations. Ever producing an quality work.</p>
+                        <p class="section_description home_description">High level experience in Design with product design, branding, motion, a little bit illustrations and social media posts. Ever producing an quality work with dedication.</p>
 
                         <div class="home_buttons">
                             <a href="http://wa.link/9dceaa" target="_blank" class="contact-button"> Contact Me
                                 <i class="uil uil-message contact-button_icon"></i>
                             </a>
                             
-                            <a download="" href="MEDIA/Curriculum Antonio Henrique.pdf" class="button-flex download_cv-button"> Download CV
+                            <a download="" href="MEDIA/EN - Curriculum Antonio Henrique DESIGN-MOTION-WEB.pdf" class="button-flex download_cv-button"> Download CV
                                 <i class="uil uil-download-alt"></i>
                             </a>
                         </div>
@@ -139,6 +138,119 @@
             </div>
         </section>
 
+        <!---------------------------- SERVICES ---------------------------->
+        <section class="services section" id="services">
+            <h1 class="section_title">Services</h1>
+
+            <span class="section_subtitle">Shall we work together?</span>
+
+            <div class="services_container container grid">
+                <div id="branding">
+                    <div class="services_content">
+                        <div class="services_data">
+                            <h2 class="services_title">
+                                BRANDING
+                            </h2>
+
+                            <span class="services_sub-title">
+                                Create your business identity
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <dialog id="brandingModal" class="services_modal">
+                    <button id="brandModalClose" class="modal-close">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <img src="MEDIA/services-imgs/branding-img.png" alt="" class="modal-img">
+                        
+                        <div class="modal-data">
+                            <p class="services_description">
+                                Branding or brand management refers to the management of a company's brand, such as its name, the images or ideas associated with it, including slogans, symbols, logos and other visual identity elements that represent it or its products and services.
+                            </p>
+
+                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
+                                <i class="uil uil-message button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </dialog>
+                
+                <div id="flyers">
+                    <div class="services_content">
+                        <div class="services_data">
+                            <h2 class="services_title">
+                                FLYERS
+                            </h2>
+
+                            <span class="services_sub-title">
+                                Promote your product the right way
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <dialog id="flyersModal" class="services_modal">
+                    <button id="flyersModalClose" class="modal-close">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <img src="MEDIA/services-imgs/flyers-img.png" alt="" class="modal-img">
+                        
+                        <div class="modal-data">
+                            <p class="services_description">
+                                Flyers are promotional materials that carry important information in a simple and direct way. Widely used for quick and punctual actions, if this is the purpose of your disclosure, avoid information that disperses the customer's attention, go straight to the point.
+                            </p>
+
+                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
+                                <i class="uil uil-message button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </dialog>
+
+
+                <div id="motion"> 
+                    <div class="services_content">
+                        <div class="services_data">
+                            <h2 class="services_title">
+                                MOTION FLYER
+                            </h2>
+                            
+                            <span class="services_sub-title">
+                                Draw even more attention in the publicity
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <dialog id="motionModal" class="services_modal">
+                    <button id="motModalClose" class="modal-close">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <img src="MEDIA/services-imgs/motion-img.gif" alt="" class="modal-img">
+                        
+                        <div class="modal-data">
+                            <p class="services_description">
+                                We can define motion design as a resource that brings graphic design to life, through animation resources and using a language that mixes the concepts of Design with cinema.
+                            </p>
+                            
+                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
+                                <i class="uil uil-message button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+
+        </section>
+
         <!------------------------------ ABOUT ------------------------------>
         <section class="about section" id="about">
             <h1 class="section_title">About Me</h1>
@@ -149,7 +261,7 @@
                 <img class="about_img" src="MEDIA/Rick_img2.png" alt=""></img>
 
                 <div class="about_data">
-                    <p class="section_description">A young Front-end developer and UX-UI student with a 7-year career as a product design. He is always willing to face new challenges and learn new things, and also meet new people. Very communicative and empathetic.</p>
+                    <p class="section_description">A young graphic designer, interface developer and computer science student with a career spanning over 7 years as a designer. Always willing to face new challenges and learn new things, meet new people and places. Communicative and empathetic.</p>
 
                     <div class="about_info">
                         <div class="about_atribute">
@@ -463,124 +575,11 @@
             </div>
         </section>
 
-        <!---------------------------- SERVICES ---------------------------->
-        <section class="services section" id="services">
-            <h1 class="section_title">Services</h1>
-
-            <span class="section_subtitle">Shall we work together?</span>
-
-            <div class="services_container container grid">
-                <div id="branding">
-                    <div class="services_content">
-                        <div class="services_data">
-                            <h2 class="services_title">
-                                BRANDING
-                            </h2>
-
-                            <span class="services_sub-title">
-                                Create your business identity
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <dialog id="brandingModal" class="services_modal">
-                    <button id="brandModalClose" class="modal-close">
-                        &times;
-                    </button>
-
-                    <div class="modal-content">
-                        <img src="MEDIA/services-imgs/branding-img.png" alt="" class="modal-img">
-                        
-                        <div class="modal-data">
-                            <p class="services_description">
-                                Branding or brand management refers to the management of a company's brand, such as its name, the images or ideas associated with it, including slogans, symbols, logos and other visual identity elements that represent it or its products and services.
-                            </p>
-
-                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
-                                <i class="uil uil-message button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </dialog>
-                
-                <div id="flyers">
-                    <div class="services_content">
-                        <div class="services_data">
-                            <h2 class="services_title">
-                                FLYERS
-                            </h2>
-
-                            <span class="services_sub-title">
-                                Promote your product the right way
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <dialog id="flyersModal" class="services_modal">
-                    <button id="flyersModalClose" class="modal-close">
-                        &times;
-                    </button>
-
-                    <div class="modal-content">
-                        <img src="MEDIA/services-imgs/flyers-img.png" alt="" class="modal-img">
-                        
-                        <div class="modal-data">
-                            <p class="services_description">
-                                Flyers are promotional materials that carry important information in a simple and direct way. Widely used for quick and punctual actions, if this is the purpose of your disclosure, avoid information that disperses the customer's attention, go straight to the point.
-                            </p>
-
-                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
-                                <i class="uil uil-message button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </dialog>
-
-
-                <div id="motion"> 
-                    <div class="services_content">
-                        <div class="services_data">
-                            <h2 class="services_title">
-                                MOTION FLYER
-                            </h2>
-                            
-                            <span class="services_sub-title">
-                                Draw even more attention in the publicity
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <dialog id="motionModal" class="services_modal">
-                    <button id="motModalClose" class="modal-close">
-                        &times;
-                    </button>
-
-                    <div class="modal-content">
-                        <img src="MEDIA/services-imgs/motion-img.gif" alt="" class="modal-img">
-                        
-                        <div class="modal-data">
-                            <p class="services_description">
-                                We can define motion design as a resource that brings graphic design to life, through animation resources and using a language that mixes the concepts of Design with cinema.
-                            </p>
-                            
-                            <a href="http://wa.link/9dceaa" target="_blank" class="modal-button"> I'm interested
-                                <i class="uil uil-message button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </dialog>
-            </div>
-
-        </section>
-
-        <!---------------------=------ PORTFOLIO ---------=------------------>
+        <!--------------------------- PORTFOLIO --------------------------->
         <section class="portfolio section" id="portfolio">
             <h1 class="section_title">Portfolio</h1>
 
-            <span class="section_subtitle">See my recent works</span>
+            <span class="section_subtitle">Some of my recent work</span>
 
             <div class="portfolio_content container grid">
                 <div class="slider">
